@@ -1,110 +1,124 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HostelSync Warden Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-surface": "#071e27",
-              "error-container": "#ffdad6",
-              "on-background": "#071e27",
-              "tertiary": "#5f1d00",
-              "primary-container": "#004b87",
-              "on-secondary-fixed": "#002203",
-              "primary-fixed": "#d3e4ff",
-              "surface-container-lowest": "#ffffff",
-              "on-tertiary": "#ffffff",
-              "secondary-fixed": "#acf4a4",
-              "primary": "#003461",
-              "tertiary-fixed-dim": "#ffb59a",
-              "on-error": "#ffffff",
-              "surface-dim": "#c7dde9",
-              "surface": "#f3faff",
-              "inverse-on-surface": "#dff4ff",
-              "surface-bright": "#f3faff",
-              "on-tertiary-fixed": "#380d00",
-              "secondary-container": "#acf4a4",
-              "tertiary-container": "#852c00",
-              "surface-container-highest": "#cfe6f2",
-              "on-primary-fixed": "#001c38",
-              "on-secondary": "#ffffff",
-              "outline": "#727781",
-              "outline-variant": "#c2c6d1",
-              "on-error-container": "#93000a",
-              "primary-fixed-dim": "#a3c9ff",
-              "on-primary-container": "#8abcff",
-              "tertiary-fixed": "#ffdbcf",
-              "secondary-fixed-dim": "#91d78a",
-              "surface-variant": "#cfe6f2",
-              "on-secondary-container": "#307231",
-              "surface-container-low": "#e6f6ff",
-              "surface-tint": "#27609d",
-              "surface-container": "#dbf1fe",
-              "on-primary-fixed-variant": "#004882",
-              "secondary": "#2a6b2c",
-              "surface-container-high": "#d5ecf8",
-              "inverse-surface": "#1e333c",
-              "on-secondary-fixed-variant": "#0c5216",
-              "inverse-primary": "#a3c9ff",
-              "on-surface-variant": "#424750",
-              "on-tertiary-fixed-variant": "#802a00",
-              "error": "#ba1a1a",
-              "on-primary": "#ffffff",
-              "on-tertiary-container": "#ffa27f",
-              "background": "#f3faff"
-            },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Work Sans"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#071e27",
+          "error-container": "#ffdad6",
+          "on-background": "#071e27",
+          "tertiary": "#5f1d00",
+          "primary-container": "#004b87",
+          "on-secondary-fixed": "#002203",
+          "primary-fixed": "#d3e4ff",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "secondary-fixed": "#acf4a4",
+          "primary": "#003461",
+          "tertiary-fixed-dim": "#ffb59a",
+          "on-error": "#ffffff",
+          "surface-dim": "#c7dde9",
+          "surface": "#f3faff",
+          "inverse-on-surface": "#dff4ff",
+          "surface-bright": "#f3faff",
+          "on-tertiary-fixed": "#380d00",
+          "secondary-container": "#acf4a4",
+          "tertiary-container": "#852c00",
+          "surface-container-highest": "#cfe6f2",
+          "on-primary-fixed": "#001c38",
+          "on-secondary": "#ffffff",
+          "outline": "#727781",
+          "outline-variant": "#c2c6d1",
+          "on-error-container": "#93000a",
+          "primary-fixed-dim": "#a3c9ff",
+          "on-primary-container": "#8abcff",
+          "tertiary-fixed": "#ffdbcf",
+          "secondary-fixed-dim": "#91d78a",
+          "surface-variant": "#cfe6f2",
+          "on-secondary-container": "#307231",
+          "surface-container-low": "#e6f6ff",
+          "surface-tint": "#27609d",
+          "surface-container": "#dbf1fe",
+          "on-primary-fixed-variant": "#004882",
+          "secondary": "#2a6b2c",
+          "surface-container-high": "#d5ecf8",
+          "inverse-surface": "#1e333c",
+          "on-secondary-fixed-variant": "#0c5216",
+          "inverse-primary": "#a3c9ff",
+          "on-surface-variant": "#424750",
+          "on-tertiary-fixed-variant": "#802a00",
+          "error": "#ba1a1a",
+          "on-primary": "#ffffff",
+          "on-tertiary-container": "#ffa27f",
+          "background": "#f3faff"
         },
-      }
-    </script>
+        fontFamily: {
+          "headline": ["Manrope"],
+          "body": ["Inter"],
+          "label": ["Work Sans"]
+        },
+        borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+      },
+    },
+  }
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-panel {
-            background: rgba(219, 241, 254, 0.8);
-            backdrop-filter: blur(12px);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background text-on-surface font-body min-h-screen">
-<!-- TopAppBar -->
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .glass-panel {
+    background: rgba(219, 241, 254, 0.8);
+    backdrop-filter: blur(12px);
+  }
+  .bg-mesh {
+    background-color: #f3faff;
+    background-image: radial-gradient(at 0% 0%, rgba(219, 241, 254, 0.5) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, rgba(163, 201, 255, 0.2) 0px, transparent 50%);
+  }
+  body { min-height: max(884px, 100dvh); }
+  .glass-nav { backdrop-filter: blur(12px); }
+  .page-section { display: none; }
+  .page-section.active { display: block; }
+</style>
+</head>
+
+<body class="bg-background text-on-surface font-body min-h-screen selection:bg-primary-container selection:text-white">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SHARED HEADER / TOP APP BAR
+═══════════════════════════════════════════════════════════════ -->
 <header class="fixed top-0 w-full z-50 bg-[#dbf1fe]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] flex justify-between items-center px-8 py-4">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#003461] dark:text-blue-400 active:scale-95 transition-transform cursor-pointer">grid_view</span>
-<h1 class="font-headline font-extrabold text-2xl tracking-tight text-[#003461] dark:text-blue-200">HostelSync</h1>
-</div>
-<div class="flex items-center gap-6">
-<nav class="hidden md:flex gap-8">
-<a class="font-headline font-bold text-sm text-[#003461] border-b-2 border-[#003461] py-1" href="#">Dashboard</a>
-<a class="font-headline font-bold text-sm text-[#424750] hover:text-[#003461] transition-colors py-1" href="#">Students</a>
-<a class="font-headline font-bold text-sm text-[#424750] hover:text-[#003461] transition-colors py-1" href="#">Inventory</a>
-</nav>
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden cursor-pointer active:scale-95 transition-transform">
-<img class="w-full h-full object-cover" data-alt="Professional headshot of a male administrative warden in a sharp business suit with a friendly and authoritative expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBsRgMgpONYxUCL4_GymqfeTz0ZA5edLmg9zFjUMhXK5DOUp_UvgQ7mQ2Ftb_uXMQck908YHQb9vaWR2lYg4D1ZSMLKr3Bb3iJCR6YNERKHkfDpx0bxGqsru1L7Vggx3Dka07-1q3KSd3BFA9YEqEcvXZiBUcTCkJKbEV3V5FcsvOPvNsgjl2IhvQyrtIH7dxXHeB-8cok9TdglLswbKbyDmcoADt1XmgfBtxwehLzJS2YAudatWSYk4oyh9ZhhJrBCL_HKYwJSGhR"/>
-</div>
-</div>
+  <div class="flex items-center gap-4">
+    <span class="material-symbols-outlined text-[#003461] dark:text-blue-400 active:scale-95 transition-transform cursor-pointer">grid_view</span>
+    <h1 class="font-headline font-extrabold text-2xl tracking-tight text-[#003461] dark:text-blue-200">HostelSync</h1>
+  </div>
+  <div class="flex items-center gap-6">
+    <nav class="hidden md:flex gap-8" id="desktop-nav">
+      <a class="nav-link font-headline font-bold text-sm py-1 transition-colors cursor-pointer" data-page="dashboard">Dashboard</a>
+      <a class="nav-link font-headline font-bold text-sm py-1 transition-colors cursor-pointer" data-page="passes">Passes</a>
+      <a class="nav-link font-headline font-bold text-sm py-1 transition-colors cursor-pointer" data-page="rooms">Rooms</a>
+      <a class="nav-link font-headline font-bold text-sm py-1 transition-colors cursor-pointer" data-page="mess">Mess</a>
+    </nav>
+    <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden cursor-pointer active:scale-95 transition-transform">
+      <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBsRgMgpONYxUCL4_GymqfeTz0ZA5edLmg9zFjUMhXK5DOUp_UvgQ7mQ2Ftb_uXMQck908YHQb9vaWR2lYg4D1ZSMLKr3Bb3iJCR6YNERKHkfDpx0bxGqsru1L7Vggx3Dka07-1q3KSd3BFA9YEqEcvXZiBUcTCkJKbEV3V5FcsvOPvNsgjl2IhvQyrtIH7dxXHeB-8cok9TdglLswbKbyDmcoADt1XmgfBtxwehLzJS2YAudatWSYk4oyh9ZhhJrBCL_HKYwJSGhR" alt="Warden Profile"/>
+    </div>
+  </div>
 </header>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 1 — DASHBOARD  (code.html / code3.html)
+═══════════════════════════════════════════════════════════════ -->
+<div id="page-dashboard" class="page-section active">
 <main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
 <!-- Welcome Section -->
 <section class="md:col-span-12 mb-4">
@@ -152,7 +166,7 @@
 <div class="relative z-10 h-full flex flex-col">
 <div class="flex justify-between items-start mb-4">
 <span class="material-symbols-outlined text-3xl">event_available</span>
-<a class="font-label text-xs uppercase tracking-widest font-bold border-b border-white/40 pb-0.5 hover:border-white transition-all" href="#">View All</a>
+<a class="font-label text-xs uppercase tracking-widest font-bold border-b border-white/40 pb-0.5 hover:border-white transition-all cursor-pointer" onclick="navigate('passes')">View All</a>
 </div>
 <div class="mt-auto">
 <h3 class="font-headline text-4xl font-extrabold mb-1">14</h3>
@@ -174,8 +188,8 @@
 </div>
 </div>
 <button class="w-full md:w-auto px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold rounded-full shadow-lg active:scale-95 transition-all">
-                    Log New Visitor
-                </button>
+  Log New Visitor
+</button>
 </div>
 </section>
 <!-- Recent Complaints Section -->
@@ -236,31 +250,681 @@
 </div>
 </article>
 </main>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-around items-center px-4 pb-4 pt-2 border-t border-[#c2c6d1]/15 z-50 rounded-t-[0.75rem] shadow-[0_-8px_24px_-4px_rgba(7,30,39,0.04)]">
-<button class="flex flex-col items-center justify-center bg-[#dbf1fe] dark:bg-blue-900/40 text-[#003461] dark:text-blue-100 rounded-[0.75rem] px-5 py-2 scale-105 transition-all">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
-<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Dashboard</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#424750] dark:text-slate-500 px-5 py-2 hover:text-[#004b87] transition-colors">
-<span class="material-symbols-outlined">event_available</span>
-<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Passes</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#424750] dark:text-slate-500 px-5 py-2 hover:text-[#004b87] transition-colors">
-<span class="material-symbols-outlined">bed</span>
-<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Rooms</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#424750] dark:text-slate-500 px-5 py-2 hover:text-[#004b87] transition-colors">
-<span class="material-symbols-outlined">restaurant</span>
-<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Mess</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#424750] dark:text-slate-500 px-5 py-2 hover:text-[#004b87] transition-colors">
-<span class="material-symbols-outlined">group_add</span>
-<span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Visitors</span>
-</button>
-</nav>
-<!-- Floating Action Button (Only for specific contexts, but here for Dashboard interaction) -->
+<!-- FAB — Dashboard only -->
 <button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform group z-40">
 <span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform duration-300">add</span>
 </button>
-</body></html>
+</div><!-- end page-dashboard -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 2 — MESS MENU & VOTING  (code1.html)
+═══════════════════════════════════════════════════════════════ -->
+<div id="page-mess" class="page-section">
+<body class="bg-mesh min-h-screen text-on-surface font-body pb-24 md:pb-0">
+<main class="pt-24 px-6 md:px-12 max-w-7xl mx-auto space-y-10">
+<!-- Hero Branding & Day Switcher -->
+<section class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant/70">Culinary Experience</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary leading-tight">Weekly Mess Schedule</h2>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded-full flex gap-1 shadow-sm overflow-x-auto no-scrollbar">
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 bg-white text-primary shadow-sm">Mon</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Tue</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Wed</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Thu</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Fri</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Sat</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-label tracking-wide transition-all duration-200 text-on-surface-variant hover:bg-surface-bright">Sun</button>
+</div>
+</div>
+</section>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Meal Cards Column -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Breakfast Card -->
+<div class="bg-surface-container-lowest rounded-xl p-7 shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-surface-container rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110 duration-500"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="space-y-1">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">07:30 - 09:00 AM</span>
+<h3 class="text-2xl font-headline font-bold text-primary pt-2">Morning Classics</h3>
+<p class="text-on-surface-variant font-body">Poha with Sev, Fresh Fruits, Masala Chai &amp; Sprouted Salad.</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-surface-container-highest text-4xl">breakfast_dining</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex justify-between text-xs font-label text-on-surface-variant">
+<span>Meal Satisfaction</span><span class="font-bold">84%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[84%] rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-primary text-xl">thumb_up</span>
+<span class="font-label text-sm font-medium text-primary">124</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">thumb_down</span>
+<span class="font-label text-sm font-medium text-on-surface-variant">12</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lunch Card -->
+<div class="bg-surface-container-lowest rounded-xl p-7 shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110 duration-500"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="space-y-1">
+<span class="bg-primary-container text-white text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">12:30 - 02:30 PM</span>
+<h3 class="text-2xl font-headline font-bold text-primary pt-2">North Indian Thali</h3>
+<p class="text-on-surface-variant font-body">Paneer Butter Masala, Dal Makhani, Jeera Rice, Tandoori Roti &amp; Boondi Raita.</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-surface-container-highest text-4xl">lunch_dining</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex justify-between text-xs font-label text-on-surface-variant">
+<span>Meal Satisfaction</span><span class="font-bold">92%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[92%] rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 bg-primary-container text-white shadow-md px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-white text-xl" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<span class="font-label text-sm font-medium">342</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">thumb_down</span>
+<span class="font-label text-sm font-medium text-on-surface-variant">8</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dinner Card -->
+<div class="bg-surface-container-lowest rounded-xl p-7 shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] relative overflow-hidden group border-2 border-primary/5">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110 duration-500"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="space-y-1">
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 rounded-full">07:30 - 09:30 PM</span>
+<h3 class="text-2xl font-headline font-bold text-primary pt-2">Continental Night</h3>
+<p class="text-on-surface-variant font-body">Veg Au Gratin, Herb Roasted Potatoes, Buttered Corn &amp; Cream of Mushroom Soup.</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-surface-container-highest text-4xl">dinner_dining</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex justify-between text-xs font-label text-on-surface-variant">
+<span>Meal Satisfaction</span><span class="font-bold">65%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[65%] rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">thumb_up</span>
+<span class="font-label text-sm font-medium text-on-surface-variant">89</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">thumb_down</span>
+<span class="font-label text-sm font-medium text-on-surface-variant">45</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Feedback & Stats Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Feedback Widget -->
+<div class="bg-surface-container-high rounded-xl p-8 space-y-6">
+<div>
+<h4 class="text-xl font-headline font-bold text-primary">Submit Feedback</h4>
+<p class="text-sm text-on-surface-variant mt-1">Tell us how we can improve the dining experience.</p>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="font-label text-xs font-semibold text-primary uppercase tracking-wider">Choose Category</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-white border-2 border-primary/10 text-xs font-body py-2 rounded-lg text-primary hover:border-primary transition-all">Taste &amp; Quality</button>
+<button class="bg-white border-2 border-primary/10 text-xs font-body py-2 rounded-lg text-on-surface-variant">Cleanliness</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-semibold text-primary uppercase tracking-wider">Your Suggestions</label>
+<textarea class="w-full h-32 bg-surface-container-lowest border-none rounded-xl p-4 text-sm font-body focus:ring-2 focus:ring-primary transition-all resize-none" placeholder="Share your thoughts here..."></textarea>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold py-3 rounded-full shadow-lg active:scale-95 transition-all">
+  Post Feedback
+</button>
+</div>
+</div>
+<!-- Stats Visual -->
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] group shadow-xl">
+<img alt="Dining Ambience" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD36syT37Y-fnfOpDfPw057Eg83FaWCqTgBpKzipYa8FymnlTmQUfRJqU-ZdZMwbsBp_tJOe4K3jAa0OkVJJqT9gicrlfiIHnNF95DOalEHNfOculnLEQf8ZOYQSGKOLLcyF8aAO4-qi7fnfu7kaRNV9z3PjdCwc98F2mFESBCfw0bEbQLvG6CyPVPwS8gQzBMGIV4UCiU336iYHQTk5xPcokf-M74THnnM5mIcePd5jDxncVCxnkty5AP4StQTtIcRWrIyn0M5QnEb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-6">
+<span class="text-white/70 font-label text-[10px] uppercase tracking-widest">Monthly Insight</span>
+<h4 class="text-white text-xl font-headline font-bold">Waste Reduced by 14%</h4>
+<p class="text-white/80 text-xs mt-2 font-body leading-relaxed">Your daily votes help our kitchen staff prepare exact quantities, minimizing food waste significantly.</p>
+</div>
+</div>
+</aside>
+</div>
+<!-- Spacer for Bottom Nav -->
+<div class="h-12"></div>
+</main>
+</div><!-- end page-mess -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 3 — ROOM ALLOCATION  (code2.html)
+═══════════════════════════════════════════════════════════════ -->
+<div id="page-rooms" class="page-section">
+<!-- Rooms Sidebar (Desktop) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-20 flex-col items-center py-8 bg-[#f3faff] dark:bg-slate-900 border-r border-outline-variant/10 z-[60]">
+<div class="mb-12 font-['Manrope'] font-black text-xl text-[#003461]">HS</div>
+<div class="flex flex-col gap-8 flex-1">
+<div class="p-3 text-[#424750] hover:text-primary transition-colors cursor-pointer" onclick="navigate('dashboard')"><span class="material-symbols-outlined">dashboard</span></div>
+<div class="p-3 bg-white text-[#003461] rounded-2xl shadow-sm"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bed</span></div>
+<div class="p-3 text-[#424750] hover:text-primary transition-colors cursor-pointer" onclick="navigate('mess')"><span class="material-symbols-outlined">restaurant</span></div>
+<div class="p-3 text-[#424750] hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">group_add</span></div>
+</div>
+<div class="mt-auto p-3 text-[#424750] hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">settings</span></div>
+</aside>
+<main class="pt-24 px-4 md:px-8 max-w-7xl mx-auto mb-20 lg:ml-20">
+<!-- Filters & Header Section -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<div>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-primary">Room Allocation</h2>
+<p class="font-body text-on-surface-variant mt-1">Real-time occupancy for Block A • West Wing</p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<div class="bg-surface-container-high px-4 py-2 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<select class="bg-transparent border-none focus:ring-0 font-label text-sm font-medium">
+<option>Floor 1</option><option>Floor 2</option><option>Floor 3</option>
+</select>
+</div>
+<div class="bg-surface-container-high px-4 py-2 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<select class="bg-transparent border-none focus:ring-0 font-label text-sm font-medium">
+<option>West Wing</option><option>East Wing</option>
+</select>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-xl font-body font-semibold flex items-center gap-2 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined">person_add</span>Allocate Bed
+</button>
+</div>
+</section>
+<!-- Legend -->
+<div class="flex gap-6 mb-8 px-2 overflow-x-auto pb-2">
+<div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-secondary"></div><span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Empty (0/3)</span></div>
+<div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-amber-500"></div><span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Partial (1-2/3)</span></div>
+<div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-error"></div><span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Full (3/3)</span></div>
+</div>
+<!-- Bento Grid Floor Plan -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Room 101: Empty -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">101</h3></div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-full uppercase">Empty</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary w-0"></div></div>
+<p class="text-[11px] font-label text-on-surface-variant">0 of 3 Beds Occupied</p>
+</div>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+</div>
+</div>
+<!-- Room 102: Partial -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-amber-500/10 rounded-bl-full"></div>
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">102</h3></div>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Partial</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-amber-500 w-2/3"></div></div>
+<p class="text-[11px] font-label text-on-surface-variant">2 of 3 Beds Occupied</p>
+</div>
+<div class="flex -space-x-2">
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGjD9r1sGNkOhzLsxs4Z7NrkJhuRub8bFvkrTEDj0KtFw665JDRNulHPIQaru1XjwO5uKmRYOOl7z3BzyOZBo1ndi5J7XSApixbp6IJmSDpIRysU0cGAeHtWyv3oLghpGDcQtFNptLj7TVLjgDqnyTlUlQwWWK0L2c84HAscVqajstGOQqwx-eEuEwae1B4XBzKjnSBT8AeHkrZQpL5xhb6h2-hhVlZzvBj4Q4JMHJsFLZPbykoeySWw9Y1tdWNW0NFT3_vjxJRXUS"/>
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3nPl0h3B7U0tlzDcrdosr2GeAthN0ODQIkkB0up-5nKuUo-zbWgKkWssihiXFHsbh9X32RUeLpKwncuvuhk_86gzpT024FiVpI_IMAfkk0v1XVOQm7GBwGtClb84qJHM1QM3AdrsyfVyj_NW2JDQKnBHvKoRsRQzYp5iUfEhgb9BFFirt8h0xbLUuaq3k-12pRgwY9o4zzF3zlIerGA9qYR13zQ8olFhZkCHBwQGXPPyCx1GrPKY9yuvMAfKjY4N8YISknKXVifGq"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+</div>
+</div>
+<!-- Room 103: Full -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">103</h3></div>
+<span class="bg-error-container text-on-error-container text-[10px] font-bold px-2 py-1 rounded-full uppercase">Full</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-error w-full"></div></div>
+<p class="text-[11px] font-label text-on-surface-variant text-error font-semibold">3 of 3 Beds Occupied</p>
+</div>
+<div class="flex -space-x-2">
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pC3RzRC0UHKCgw2x3CqgE9i2btv8I9VLYRVVD1A075oYdMZR-CI46ROwVXfLDwL_gEsghEIfKaKln9S443KD6nQlbrfsLrfpJyVnYWLM-KTPDQnwzTeozikjYknYM2cB5jRK_OIf7FxtpjlcQwgu-5sVmlGzsxhxVnENeZwP0aS4oIpjRoMW5YNaHoPm2Nmx_4TojGWrG4DzVz8zLvo2UWT4DHJBVzy5j3-HENnn8BxhsV8avdvnpsM3jHc8Pywy6f6Zog7NROAW"/>
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8bHu8PUwCyZDebU5KHc7rq2R7JlE__KOGe0LkECMO3QUQUxsvIH0QL844hPcpfnnuMw1OpDDrysWLhp3fRYoW45MyPIUdDCLu_GIBTzsAI2ABB2KuldVWVBj7Yk2tQAMpj63FHFdtB4UY4zklKFN799Z-ykW9ZS2t_sfnhr593UL4H2uyHaI5te8mwyQz7RRbUGq2cyrGl-D-oVJ2S-rLBsvASVk6UtlHe-D4MhHeJMXaxzFJg_dfknVWwz88VZZfOKFCaaGFsEoI"/>
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8_gpCH_y_FRpdhUBsSKgvtkoCx-6I9PnhVQcX_ry47FpOw3MKH2aUSVaipn82shHOqaGgXH3NFXc3ZsY55T-tHVQJ5jVyj3yUc498IgS9MSEMcAWyXSW4TKIrr_4X0RqG34d4molgeDwKrFyDACSfhCsBLIIosUXE53okjjYjjYnICuTIZtHxHTKazylOfiOirTlwEHMINKeFh1GJwUWYTyohw_0U7TxqJJ3wBO1j5yFp_AkopNium_HGNjnu0ADPtsTrMEgHKStr"/>
+</div>
+</div>
+<!-- Room 104: Partial -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">104</h3></div>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Partial</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-amber-500 w-1/3"></div></div>
+<p class="text-[11px] font-label text-on-surface-variant">1 of 3 Beds Occupied</p>
+</div>
+<div class="flex -space-x-2">
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk9BgzWKR1Ny5_EUtCl1-GfbxHBNXEuc3IAOiQsQeucplHLxLwws4D7vk7CDybNM6zX8G4CulQiy-iEC3m7T9Nht5-hT4aSaV_oxARSDpuIbagWYW1sKywJzxjH2aXgir-l8MQ9OYH06Ig-CzQQ1YyHjVHNNAwE17kKU5EHxlVubcZjJU-JTEyj1ULqRy9EWuXc9jhd722nhk9oa49sV8odrZVf_1ZDj6gfFos7WyRaYJVmua4qfOHB3jhPRmNMEO_FHfPHDMT9eac"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-sm text-outline">bed</span></div>
+</div>
+</div>
+<!-- Room 105: Blocked -->
+<div class="bg-surface-container-low border border-dashed border-outline-variant p-6 rounded-xl transition-all cursor-not-allowed">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-surface-dim">105</h3></div>
+<span class="bg-surface-dim text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded-full uppercase">Blocked</span>
+</div>
+<div class="flex flex-col items-center justify-center py-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl mb-1">build</span>
+<p class="text-[11px] font-label font-medium">Under Maintenance</p>
+</div>
+</div>
+<!-- Room 106: Empty -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">106</h3></div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-full uppercase">Empty</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-6"><div class="h-full bg-secondary w-0"></div></div>
+<div class="flex -space-x-2"><div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container"></div><div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container"></div><div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container"></div></div>
+</div>
+<!-- Room 107: Full -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">107</h3></div>
+<span class="bg-error-container text-on-error-container text-[10px] font-bold px-2 py-1 rounded-full uppercase">Full</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-6"><div class="h-full bg-error w-full"></div></div>
+<div class="flex -space-x-2"><div class="w-8 h-8 rounded-full bg-slate-300"></div><div class="w-8 h-8 rounded-full bg-slate-400"></div><div class="w-8 h-8 rounded-full bg-slate-500"></div></div>
+</div>
+<!-- Room 108: Partial -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div><span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Room</span><h3 class="font-headline text-2xl font-bold text-primary">108</h3></div>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Partial</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-6"><div class="h-full bg-amber-500 w-1/3"></div></div>
+<div class="flex -space-x-2"><div class="w-8 h-8 rounded-full bg-slate-300"></div><div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container"></div><div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container"></div></div>
+</div>
+</div>
+<!-- Resident Detail Overlay -->
+<div class="mt-16 bg-surface-container-highest/30 rounded-3xl p-8 border border-white/40 backdrop-blur-sm">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>Room 102 Details
+</h4>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="Resident" class="w-12 h-12 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUGI2vflGytX9G3Nc6H2eL2PIG8AAUikobwzNGLURNY2b7XWS9T9EGUlGwB7dl5SBzUAynjIICPRodJ2qIPqW28dVsrRtORfTauUZs8ZbUuLfn2COxtjhVd9gnBB62y4SNAXd5-On5iSk9auOg8dfS4iE3SvuYWRwocWaeY0Y0G_f_eVst50kkqIvMLsYGYLOPL0qGRhyCLN3o2P-78vYoX_1FAEt3AYYXeU3wJ2Ace9djvegDmltyXnF9O74kudLh9gjI_CtgaRYn"/>
+<div>
+<p class="font-body font-bold text-on-surface">Arjun Mehta</p>
+<p class="text-xs font-label text-on-surface-variant">ID: HS-2024-089 • 2nd Year B.Tech</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Allocated</span>
+<p class="text-sm font-bold text-secondary">Jan 12, 2024</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="Resident" class="w-12 h-12 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpImQ7jHgz4GjGZYTMHjC3PMAAOoK076IZwMalk2UbrFqsmj43k328xpCwiXjjISIyEOZ_Z8MPzH3v2iC047Dbg0z6yYGDzWwnAJeoRlIA4zrWivUGsuL0qKT0mI2AGmgdKVyYnOCFzNNRjyAihzEygQyX52K7AbE9gpXRelttiD87UbI9Yx-_fbgf7NouabAa8OKN8qtyV-KxdzqBa0JQlAd16e5VD4QowGvImRpkFWlQ4uSduXGxIoFsKRXJ48CmVKgMdj7Ay1Gc"/>
+<div>
+<p class="font-body font-bold text-on-surface">Sara Khan</p>
+<p class="text-xs font-label text-on-surface-variant">ID: HS-2024-112 • 1st Year M.Des</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Allocated</span>
+<p class="text-sm font-bold text-secondary">Feb 05, 2024</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-80 space-y-6">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<h5 class="text-xs font-label text-on-surface-variant uppercase tracking-widest mb-4">Quick Statistics</h5>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface px-4 py-3 rounded-xl">
+<p class="text-2xl font-headline font-extrabold text-primary">84%</p>
+<p class="text-[10px] font-label text-on-surface-variant">Occupancy</p>
+</div>
+<div class="bg-surface px-4 py-3 rounded-xl">
+<p class="text-2xl font-headline font-extrabold text-secondary">12</p>
+<p class="text-[10px] font-label text-on-surface-variant">Beds Open</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-body font-bold py-4 rounded-2xl transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">file_download</span>Export Floor Report
+</button>
+</div>
+</div>
+</div>
+</main>
+</div><!-- end page-rooms -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 4 — GATE PASS APPROVAL  (code4.html)
+═══════════════════════════════════════════════════════════════ -->
+<div id="page-passes" class="page-section">
+<main class="pt-28 pb-32 px-4 md:px-8 max-w-7xl mx-auto min-h-screen">
+<section class="mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h2 class="font-headline font-bold text-3xl text-on-surface tracking-tight">Gate Pass Approval</h2>
+<p class="text-on-surface-variant font-body">Manage and review student exit requests for the current semester.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-full bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-sm font-body" placeholder="Search student name or ID..." type="text"/>
+</div>
+<div class="flex bg-surface-container-high p-1 rounded-full w-full md:w-auto">
+<button class="px-6 py-2 rounded-full text-xs font-label font-medium bg-white text-primary shadow-sm transition-all">Pending</button>
+<button class="px-6 py-2 rounded-full text-xs font-label font-medium text-on-surface-variant hover:text-primary transition-all">Approved</button>
+<button class="px-6 py-2 rounded-full text-xs font-label font-medium text-on-surface-variant hover:text-primary transition-all">All</button>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Pass Card 1: Arjun Malhotra -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Student 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB76gwvxLylatithmsEa1dPmnQOPk3mNj1xSeJAIn3jV7HyCYQTLfGAHwzHsVEKWekoB1HBVh3C-Mas4CzOAz5qKGiePAPVBGnsrnL3i4pGcySFMmf6ybTMezn0uS1qvYVV9F7Cf9hrPKOpOEUgHF8uOrvWhq7BIJM56eOJ5KzVq0cxQjEiH6Cf3CLPXEk9BqPwAIRF-xUt0XsiVrn8xXRWFrQvCspSxCtxjFguvWgJpgTpP3WqOYUAFIq6sXdn_VVPhs5li1YaCim8"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-primary">Arjun Malhotra</h3>
+<p class="font-label text-xs font-medium text-on-surface-variant tracking-wide">ROOM 304-B • BLOCK ALPHA</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Urgent</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl mb-6">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined text-xl">medical_services</span>
+<span class="text-sm font-semibold">Medical Appointment</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">Dental emergency follow-up. Need to visit City Health Center for procedure at 2:00 PM.</p>
+<div class="flex justify-between items-center pt-3 border-t border-outline-variant/15">
+<div class="space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Start</p>
+<p class="text-xs font-bold font-body">Oct 24, 01:30 PM</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward</span>
+<div class="text-right space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Return</p>
+<p class="text-xs font-bold font-body">Oct 24, 06:00 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-headline font-bold text-sm shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>Approve Request
+</button>
+<button class="px-6 py-3.5 bg-surface-container-high text-on-surface-variant rounded-xl font-headline font-bold text-sm hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all">Reject</button>
+</div>
+</div>
+<!-- Pass Card 2: Sanya Iyer -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Student 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaY4-IORzVn1swQC7xVwsygQQNA2uydtwGF4YiS3Uhp091w_fLXWYdaI2ZXCmziS7_dOZlOeKpwQ0rGDLm3WT9gbQzB694fU0_-Bbt-sw9AIeF91T9bzU_WfzFVo_9P-Li54JoPMa9x-gQ4I7nUjBThv6pGbKDYrGT24tdzJAedHtmqj8o6AFXOqQb2SJuCfogOltzb1TyiM9kjKTs3mhlilX1u6Ojn3wJRIXqDxv25-LBXcgqXbaM_GLyinsKH1MdVsyq6lK_EhVr"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-primary">Sanya Iyer</h3>
+<p class="font-label text-xs font-medium text-on-surface-variant tracking-wide">ROOM 112-A • BLOCK BETA</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-xl mb-6">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined text-xl">home</span>
+<span class="text-sm font-semibold">Weekend Visit</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">Going home for my sibling's engagement ceremony. Travel tickets attached.</p>
+<div class="flex justify-between items-center pt-3 border-t border-outline-variant/15">
+<div class="space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Start</p>
+<p class="text-xs font-bold font-body">Oct 25, 04:00 PM</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward</span>
+<div class="text-right space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Return</p>
+<p class="text-xs font-bold font-body">Oct 27, 09:00 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-headline font-bold text-sm shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>Approve Request
+</button>
+<button class="px-6 py-3.5 bg-surface-container-high text-on-surface-variant rounded-xl font-headline font-bold text-sm hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all">Reject</button>
+</div>
+</div>
+<!-- Pass Card 3: Rohan Das -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Student 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkNPyp4JEz7aeVaEK9KP7DQ9z-jGk_NvSdvEOpGi7zC1Z-J4o1Opul0kjLKDD8qCVBS0BfaYAlL8JkS8H85KyEuYwlL-_thwNC8Fth1OmSdXeET1gAUo17dhn3f3f-9V3WJdbNgpW4Vy-TiCBATEqETUECtpHf0tdACsT__LsjOu9TiJjtkdSI7_bdsx_Vy-v-UyqmSIdRTEpnCMJFNJQ66li8aibk_JouiEXCQmhFqFXwm-v0oECCLUZZhU2MI_7aUIR77lOV6eU0"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-primary">Rohan Das</h3>
+<p class="font-label text-xs font-medium text-on-surface-variant tracking-wide">ROOM 502-C • BLOCK GAMMA</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-xl mb-6">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined text-xl">shopping_basket</span>
+<span class="text-sm font-semibold">Local Outing</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">Buying stationary and project supplies from the local market. Will be back by dinner.</p>
+<div class="flex justify-between items-center pt-3 border-t border-outline-variant/15">
+<div class="space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Start</p>
+<p class="text-xs font-bold font-body">Today, 04:30 PM</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward</span>
+<div class="text-right space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Return</p>
+<p class="text-xs font-bold font-body">Today, 08:30 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-headline font-bold text-sm shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>Approve Request
+</button>
+<button class="px-6 py-3.5 bg-surface-container-high text-on-surface-variant rounded-xl font-headline font-bold text-sm hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all">Reject</button>
+</div>
+</div>
+<!-- Pass Card 4: Meera Nair -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-[0_12px_32px_-4px_rgba(7,30,39,0.06)] group hover:translate-y-[-4px] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl overflow-hidden shadow-sm">
+<img alt="Student 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw-VoDtCexN2hF9lVtwYbzd78dfKEbGT5OIqMIxvNUQCBD1kq-CtA91E77qC9RV6XMEtlOpsOO7ufwDpH5xAlV1Dz5LEcLsaQoJO5P41Y_PNcjg7Z5r9bEpGjhKQhn8vEKcu5tPKGCeS4Q5NzyJ9R-enchmAj2g2jFR167SaxOFBI1ynaCms-42L_CnCQiabFP6eUDzv0W7LpAdfp7TmCIGjDe4b0Pcc_jyIoi45bbwXJo05KoIVT_VER-UHLlD942dRurliOodFlM"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-primary">Meera Nair</h3>
+<p class="font-label text-xs font-medium text-on-surface-variant tracking-wide">ROOM 205-B • BLOCK ALPHA</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-xl mb-6">
+<div class="flex items-center gap-3 mb-2 text-primary">
+<span class="material-symbols-outlined text-xl">school</span>
+<span class="text-sm font-semibold">Internship Interview</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">Final round interview at Tech Solutions Pvt Ltd. Formal attire request approved by HOD.</p>
+<div class="flex justify-between items-center pt-3 border-t border-outline-variant/15">
+<div class="space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Start</p>
+<p class="text-xs font-bold font-body">Oct 25, 09:00 AM</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward</span>
+<div class="text-right space-y-0.5">
+<p class="text-[10px] text-on-surface-variant font-label uppercase">Return</p>
+<p class="text-xs font-bold font-body">Oct 25, 03:00 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-headline font-bold text-sm shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>Approve Request
+</button>
+<button class="px-6 py-3.5 bg-surface-container-high text-on-surface-variant rounded-xl font-headline font-bold text-sm hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all">Reject</button>
+</div>
+</div>
+</div>
+</main>
+</div><!-- end page-passes -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SHARED BOTTOM NAV (Mobile Only)
+═══════════════════════════════════════════════════════════════ -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-around items-center px-4 pb-4 pt-2 border-t border-[#c2c6d1]/15 z-50 rounded-t-[0.75rem] shadow-[0_-8px_24px_-4px_rgba(7,30,39,0.04)]" id="bottom-nav">
+  <button class="bottom-nav-btn flex flex-col items-center justify-center px-5 py-2 hover:text-[#004b87] transition-colors" data-page="dashboard">
+    <span class="material-symbols-outlined" id="bn-icon-dashboard">dashboard</span>
+    <span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Dashboard</span>
+  </button>
+  <button class="bottom-nav-btn flex flex-col items-center justify-center px-5 py-2 hover:text-[#004b87] transition-colors" data-page="passes">
+    <span class="material-symbols-outlined" id="bn-icon-passes">event_available</span>
+    <span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Passes</span>
+  </button>
+  <button class="bottom-nav-btn flex flex-col items-center justify-center px-5 py-2 hover:text-[#004b87] transition-colors" data-page="rooms">
+    <span class="material-symbols-outlined" id="bn-icon-rooms">bed</span>
+    <span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Rooms</span>
+  </button>
+  <button class="bottom-nav-btn flex flex-col items-center justify-center px-5 py-2 hover:text-[#004b87] transition-colors" data-page="mess">
+    <span class="material-symbols-outlined" id="bn-icon-mess">restaurant</span>
+    <span class="font-['Work_Sans'] text-[11px] font-medium tracking-wide uppercase mt-1">Mess</span>
+  </button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION SCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  const pages = ['dashboard', 'mess', 'rooms', 'passes'];
+
+  // Nav link labels mapped to page IDs
+  const navLabels = {
+    dashboard: 'Dashboard',
+    passes: 'Passes',
+    rooms: 'Rooms',
+    mess: 'Mess'
+  };
+
+  // Bottom nav fill icons (filled when active)
+  const bnIcons = {
+    dashboard: { fill: 'dashboard', empty: 'dashboard' },
+    passes:    { fill: 'event_available', empty: 'event_available' },
+    rooms:     { fill: 'bed', empty: 'bed' },
+    mess:      { fill: 'restaurant', empty: 'restaurant' }
+  };
+
+  function navigate(pageId) {
+    // Hide all pages
+    pages.forEach(p => {
+      const el = document.getElementById('page-' + p);
+      if (el) el.classList.remove('active');
+    });
+
+    // Show selected page
+    const target = document.getElementById('page-' + pageId);
+    if (target) target.classList.add('active');
+
+    // Update desktop nav active state
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const isActive = link.dataset.page === pageId;
+      link.classList.toggle('text-[#003461]', isActive);
+      link.classList.toggle('border-b-2', isActive);
+      link.classList.toggle('border-[#003461]', isActive);
+      link.classList.toggle('text-[#424750]', !isActive);
+      link.classList.toggle('hover:text-[#003461]', !isActive);
+    });
+
+    // Update bottom nav active state
+    document.querySelectorAll('.bottom-nav-btn').forEach(btn => {
+      const isActive = btn.dataset.page === pageId;
+      if (isActive) {
+        btn.classList.add('bg-[#dbf1fe]', 'text-[#003461]', 'rounded-[0.75rem]', 'scale-105');
+        btn.classList.remove('text-[#424750]');
+        // Fill the icon
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+      } else {
+        btn.classList.remove('bg-[#dbf1fe]', 'text-[#003461]', 'rounded-[0.75rem]', 'scale-105');
+        btn.classList.add('text-[#424750]');
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+      }
+    });
+
+    // Scroll to top on page change
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Attach desktop nav click handlers
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => navigate(link.dataset.page));
+  });
+
+  // Attach bottom nav click handlers
+  document.querySelectorAll('.bottom-nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => navigate(btn.dataset.page));
+  });
+
+  // Initialize on Dashboard
+  navigate('dashboard');
+</script>
+
+</body>
+</html>
